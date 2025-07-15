@@ -70,16 +70,26 @@ body {
     margin-bottom: 3rem;
 }
 
+.h2C {
+    padding-top: 10%;
+}
+
 .seccionRutinas h2 {
+    display: flex;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: var(--naranja);
+    font-size: var(--fs-h2-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
 }
 
 .seccionRutinas .galeria {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    padding-top: 1%;
+    padding-bottom: 10%;
 }
 
 .seccionRutinas .item {
@@ -121,7 +131,7 @@ body {
 }
 
 /* Para que el SVG esté alineado justo al lado derecho del texto "Ver más" */
-.seccionRutinas .ver-mas + svg {
+.seccionRutinas .ver-mas+svg {
     color: var(--naranja);
     width: 3rem;
     height: 3rem;
@@ -130,7 +140,7 @@ body {
 }
 
 .seccionRutinas .ver-mas:hover,
-.seccionRutinas .ver-mas:hover + svg,
+.seccionRutinas .ver-mas:hover+svg,
 .seccionRutinas .item svg:hover {
     color: var(--rojo);
 }
