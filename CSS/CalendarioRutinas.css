@@ -38,128 +38,111 @@ html {
 html,
 body {
     overflow-x: hidden;
-    /* corta solo lo que sobresale a los lados */
     overflow-y: auto;
 }
 
-.seccionRutinas {
-    background-color: var(--negro);
-    padding: 4rem 2rem;
-    min-height: 100vh;
+.contenedorH2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
+    z-index: 2;
 }
 
-.contenedorRutinas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-}
-
-
-
-.rutinasNiveles {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap:2 rem;
-    margin-top: 2rem;
-}
-
-.rutina {
-    flex: 1 1 30%;
-    background-color: var(--negro);
-    border-radius: 8px;
-    padding: 8rem;
+.h2C {
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    color: var(--blanco);
-}
-
-.rutina:hover {
-    transform: scale(1.03);
-}
-
-.rutina img {
-    width: 30rem;
-    height: 30rem;
-    border-radius: 6px;
-    object-fit: cover;
-}
-
-.textoDescarga {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.textoDescarga a {
-    font-size: var(--fs-h3-W);
+    font-size: 6rem;
     font-family: var(--ff-Teko);
     font-weight: 400;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+
+.seccionRutinas {
+    padding: 2rem;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.seccionRutinas .rutina {
+    margin-bottom: 3rem;
+}
+
+.seccionRutinas h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.seccionRutinas .galeria {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.seccionRutinas .item {
+    background: var(--negro);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.seccionRutinas .item:hover {
+    box-shadow: 0 4px 16px rgb(0 0 0 / 0.2);
+}
+
+.seccionRutinas .item img {
+    max-width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    height: 180px;
+}
+
+.seccionRutinas .ver-mas {
+    margin-top: 0.75rem;
     color: var(--naranja);
+    font-weight: 400;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: var(--fs-p-W);
+    padding-top: 5%;
 }
 
-@media (max-width: 992px) {
-    .seccionRutinas {
-        padding: 6rem 2rem;
-        min-height: 130vh; 
+/* Para que el SVG esté alineado justo al lado derecho del texto "Ver más" */
+.seccionRutinas .ver-mas + svg {
+    color: var(--naranja);
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.seccionRutinas .ver-mas:hover,
+.seccionRutinas .ver-mas:hover + svg,
+.seccionRutinas .item svg:hover {
+    color: var(--rojo);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .seccionRutinas .galeria {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .contenedorRutinas {
-        gap: 3rem;
-    }
-
-    .rutinasNiveles {
-        flex-direction: column; 
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .rutina {
+    .seccionRutinas .item {
         flex: 1 1 100%;
-        padding: 4rem;
-    }
-
-    .rutina img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-
-.rutina:last-child {
-    padding: 6rem 4rem;
-    transform: scale(1.05);
-}
-
-.rutina:last-child img {
-    width: 100%;
-    max-width: 40.9rem;
-    height: auto;
-    border-radius: 10px;
-}
-
-
-
-    .textoDescarga a {
-        font-size: 2.5rem;
-    }
-
-    .btn {
-        padding: 10px 18px;
-        font-size: 1.4rem;
-    }
-
-    .h2R {
-        font-size: 4rem;
-        text-align: center;
     }
 }
-
