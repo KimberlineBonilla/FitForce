@@ -1288,16 +1288,14 @@ footer {
         display: flex;
     }
 
-    .seccion_Rutinas{
-        .btnR{
-            padding-bottom: 5%;
-        }
+    .btnR {
+        padding-bottom: 5%;
     }
 
     .seccionBlog {
-        min-height: 120vh; 
+        min-height: 120vh;
     }
-    
+
     .galeriaB {
         flex-direction: column;
         gap: 4rem;
@@ -1450,13 +1448,15 @@ footer {
 }
 
 @media (max-width: 379px) {
-    .seccionBlog{
+    .seccionBlog {
         height: 50%
     }
-    .h21Blog{
+
+    .h21Blog {
         font-size: 5rem;
     }
-    .pB{
+
+    .pB {
         font-size: 5rem;
     }
 }
