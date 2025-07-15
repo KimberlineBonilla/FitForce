@@ -1453,8 +1453,7 @@ footer {
 
 @media (max-width: 377px) {
     #Rutinas {
-        min-height: 100vh;
-        /* que ocupe todo el alto del viewport */
+        min-height: 150vh;
         padding: 80px 10px;
     }
 
