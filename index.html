@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Force</title>
+    <link rel="icon" type="image/png" href="img/Banner/Favicon.png">
+    <!-- link a GooGle Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link a CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Link al CSS de los Media Query -->
+    <link rel="stylesheet" href="CSS/media_queries.css">
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar">
+            <div>
+                <img src="img/Banner/Logo.png" alt="Logo">
+            </div>
+            <ul class="ul_menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
+                <li><a href="#Rutinas">Rutinas</a></li>
+                <li><a href="#Calendario">Calendario</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#Testimonios">Testimonios</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+            <div class="menu">
+                <button class="menu_btn" aria-label="abrirMenu"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+        <!--Final NavBar -->
+
+        <video class="video" autoplay muted loop playsinline poster="img/banner-poster.jpg">
+            <source src="img/Banner/cros.mp4" type="video/mp4">
+        </video>
+
+
+
+        <div class="contenido">
+            <div class="contenido_banner">
+                <h1>El dolor es temporal, <span class="h1Red">la gloria es eterna</span></h1>
+                <p>Con disciplina se forjan leyendas. Forja la tuya hoy mismo.</p>
+                <a href="#sobreNosotros" class="btn">Ver más</a>
+            </div>
+        </div>
+
+    </header>
+    <div class="figura"></div>
+    <!-- Sección cards-->
+    <section class="cards">
+        <div>
+            <img src="img/Cards/Card_Fuerza.png" alt="Fuerza">
+            <p>Fuerza</p>
+        </div>
+        <div>
+            <img src="img/Cards/Card_Fortaleza.png" alt="Fortalñeza">
+            <p>Fortaleza</p>
+        </div>
+        <div>
+            <img src="img/Cards/Card_Firmeza.png" alt="Firmeza">
+            <p>Firmeza</p>
+        </div>
+    </section>
+
+
+    <main>
+
+
+        <!-- Sección Sobre Nosotros -->
+        <section id="sobreNosotros" class="sobreNosotros">
+            <article>
+                <h2 class="h2SN">Sobre<span>Nosotros</span></h2>
+            </article>
+            <article class="fila1_SN">
+                <div class="contenedor_iconos">
+                    <svg class="iconos" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                        <path fill="currentColor"
+                            d="M31.293 41.217a6.7 6.7 0 0 1-2.705.586c-4.42 0-8.016-4.397-8.016-9.801c0-5.405 3.596-9.804 8.016-9.804a6.7 6.7 0 0 1 2.719.593c2.247 1.25 3.956 3.631 4.626 6.521h5.893l-.001-.01c-.029-.211-.047-.425-.082-.633a19 19 0 0 0-.32-1.52l-.006-.03c-1.768-7.022-7.24-12.157-13.707-12.157c-7.895 0-14.314 7.643-14.314 17.039c0 9.393 6.42 17.035 14.314 17.035c6.467 0 11.938-5.133 13.707-12.152c.006-.021.008-.044.014-.065c.121-.487.229-.981.313-1.485c.037-.214.055-.435.084-.65l.016-.121h-5.885c-.652 2.952-2.379 5.389-4.666 6.654" />
+                        <path fill="currentColor"
+                            d="M60.172 33.268c.918.004.918-2.66 0-2.664h-.359L62 19.268l-4.022 2.1l-2.845 9.237h-2.131l2.806-8.104l-4.354 2.272l-2.688 5.832h-2.09l2.726-4.939l1.505-.785C48.256 11.765 38.462 2 26.811 2C13.129 2 2 15.458 2 32s11.129 30 24.811 30c11.685 0 21.502-9.821 24.117-22.994l-1.526-.796l-2.726-4.939h2.09l2.689 5.833l4.353 2.271l-2.807-8.104h2.132l2.845 9.237l4.022 2.1l-2.188-11.338zM38.643 50.28c-3.086 2.79-6.9 4.442-11.023 4.442C17.369 54.723 9.031 44.529 9.031 32c0-12.531 8.338-22.725 18.588-22.725c4.123 0 7.936 1.652 11.023 4.442c3.616 3.429 6.172 8.393 7.038 14.068l-.171.089l-2.092 2.729H31.515c-.391-1.47-1.369-2.516-2.523-2.516c-1.496 0-2.709 1.75-2.709 3.913c0 2.159 1.213 3.911 2.709 3.911c1.188 0 2.185-1.11 2.551-2.644h11.875L45.51 36l.186.097c-.849 5.721-3.413 10.731-7.053 14.183m20.371-17.624l-29.117-.001c-.879.001-.879-1.437 0-1.437h29.654c.881.002.881 1.438 0 1.437z" />
+                    </svg>
+                    <p class="pSH">
+                        Empoderamos a nuestra comunidad para <br> alcanzar su mejor versión a través de <br>
+                        entrenamientos efectivos, nutrición <br> inteligente y herramientas <br> personalizadas,
+                        elevando el rendimiento <br> físico y mental con propósito y constancia.
+                    </p>
+                </div>
+                <div class="contenedor_iconos">
+                    <svg class="iconos" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5" />
+                    </svg>
+                    <p class="pSH">
+                        Ser la plataforma líder que transforma <br> estilo de vida, promoviendo salud, fuerza <br> y
+                        equilibrio. Aspiramos a inspirar una <br> cultura donde entrenar, alimentarse bien <br> y
+                        superar retos diarios sea parte de la <br> rutina de todos.
+                    </p>
+                </div>
+            </article>
+            <article class="fila2_SN">
+                <svg class="iconos" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                    <path fill="currentColor"
+                        d="M96 104a8 8 0 0 1 8-8h64a8 8 0 0 1 0 16h-64a8 8 0 0 1-8-8m8 40h64a8 8 0 0 0 0-16h-64a8 8 0 0 0 0 16m128 48a32 32 0 0 1-32 32H88a32 32 0 0 1-32-32V64a16 16 0 0 0-32 0c0 5.74 4.83 9.62 4.88 9.66A8 8 0 0 1 24 88a7.9 7.9 0 0 1-4.79-1.61C18.05 85.54 8 77.61 8 64a32 32 0 0 1 32-32h136a32 32 0 0 1 32 32v104h8a8 8 0 0 1 4.8 1.6c1.2.86 11.2 8.79 11.2 22.4M96.26 173.48A8.07 8.07 0 0 1 104 168h88V64a16 16 0 0 0-16-16H67.69A31.7 31.7 0 0 1 72 64v128a16 16 0 0 0 32 0c0-5.74-4.83-9.62-4.88-9.66a7.82 7.82 0 0 1-2.86-8.86M216 192a12.58 12.58 0 0 0-3.23-8h-94a27 27 0 0 1 1.21 8a31.8 31.8 0 0 1-4.29 16H200a16 16 0 0 0 16-16" />
+                </svg>
+                <p class="pSH">
+                    Desde un sueño constante y dedicación continua, los fundadores de FitForce se comprometieron con la
+                    excelencia <br> y un propósito claro: cuidar la salud de nuestros clientes mientras los empoderamos
+                    a superarse cada día. Tras <br> años perfeccionando entrenamientos, recetas y creando una comunidad
+                    sólida, convertimos esa visión en un <br> lugar seguro que prioriza el bienestar físico y mental por
+                    encima de todo. Hoy somos mucho más que una <br> plataforma: somos un movimiento donde cada logro
+                    compartido, br cada meta alcanzada y cada paso hacia una <br> vida más saludable fortalecen nuestra
+                    convicción de que alcanzar la excelencia es también proteger y potenciar <br> la salud de quienes
+                    confían en nosotros.
+                </p>
+            </article>
+        </section>
+
+        <!-- Seccion Rutinas -->
+        <section id="Rutinas" class="seccion_Rutinas">
+            <article class="imgRutinas">
+                <img src="img/Rutinas/imgRutinas.png" alt="">
+            </article>
+            <article class="contenedorRutinas">
+                <h2 class="h2R">Las <span>Mejores</span> Rutinas</h2>
+                <p class="pR">En nuestro centro combinamos lo mejor de dos mundos: las rutinas de gimnasio que <br>
+                    refuerzan tu <span>fortaleza</span> muscular, mejoran la resistencia y moldean el cuerpo, junto con
+                    <br> dinámicos entrenamientos de CrossFit basados en movimientos <span>funcionales</span> de alta
+                    <br> intensidad (WODs), adaptables a todos los niveles.</p>
+                <br>
+                <br>
+                <p class="pR">Cada sesión, ya sea de <span>fuerza</span> con pesas, ejercicios cardiovasculares o
+                    circuitos CrossFit, <br> está diseñada para ayudarte a superar tus límites de forma segura y
+                    efectiva, con <br> técnicas que mejoran la movilidad, potencia y salud integral.</p>
+                <a href="calendarioRutinas.html" class="btn">Ver Rutinas</a>
+            </article>
+        </section>
+        <!-- Seccion Blog -->
+        <section id="Blog" class="blog">
+            <article class="seccionBlog">
+                <h2 class="h21Blog">Blog</h2>
+                <br>
+                <div class="contenedor_pB">
+                    <p class="pB">Nutrición-Recuperación-Motivación</p>
+                    <p class="pB">
+                        ¡Bienvenido al blog de <span>FitForce.</span> Aquí, donde la <span>fortaleza</span> se forja con
+                        cada entrenamiento y la <span>fuerza</span> se alimenta de disciplina y pasión, encontrarás
+                        inspiración para potenciar tu bienestar físico y mental. En este espacio, exploraremos temas
+                        esenciales como la nutrición adecuada, estrategias de recuperación eficaces y fuentes de
+                        motivación que te impulsarán a superar tus límites. Creemos que cada persona posee una
+                        <span>fibra </span>interior capaz de resistir y crecer ante los desafíos. <br> <br> Nuestra
+                        misión es ayudarte a descubrir y <span>fortalecer</span> esa <span>fibra</span> ,
+                        proporcionándote herramientas y conocimientos que te permitan lcanzar tus objetivos de forma
+                        sostenible y saludable. <br> <br>A través de artículos detallados, consejos prácticos y
+                        testimonios inspiradores, te acompañaremos en tu camino hacia una vida más activa y equilibrada.
+                        Ya sea que estés comenzando tu viaje <span>fitness</span> o buscando llevar tu rendimiento al
+                        siguiente nivel, en <span>FitForce</span> encontrarás el apoyo y la información que necesitas
+                        para avanzar con confianza y determinación.¡Prepárate para transformar tu vida y liberar todo tu
+                        potencial con <span>FitForce!</span>
+                    </p>
+                </div>
+            </article>
+            <article class="categoriasB">
+                <div class="nutricion">
+                    <h2 class="h2B">Nutrición</h2>
+                    <p class="pN">La nutrición es la fundación que otorga la fuerza y el foco necesarios para alcanzar
+                        alto rendimiento. Una dieta balanceada, rica en fibra, proteínas magras y carbohidratos
+                        complejos alimenta tus entrenamientos, mientras las grasas saludables apoyan la función hormonal
+                        y la resistencia.Además, mantenerte bien hidratado es fundamental: incluso un 2% de
+                        deshidratación puede afectar negativamente tu energía, recuperación y concentración. Integrar
+                        estos elementos en tu alimentación diaria optimiza la recuperación, potencia la formación de
+                        músculo y afina tu foco mental para superar cada desafío con decisión
+                    </p>
+                    <img class="imgT-Nutricion" src="img/Blog/Nutrición.jpg" alt="">
+                </div>
+                <div class="nutricion2">
+                    <h2 class="h2B">Nutrición</h2>
+                    <p class="pN">La nutrición es la fundación que otorga la fuerza y el foco necesarios para alcanzar
+                        alto rendimiento. Una dieta balanceada, rica en fibra, proteínas magras y carbohidratos
+                        complejos alimenta tus entrenamientos, mientras las grasas saludables apoyan la función hormonal
+                        y la resistencia.Además, mantenerte bien hidratado es fundamental: incluso un 2% de
+                        deshidratación puede afectar negativamente tu energía, recuperación y concentración. Integrar
+                        estos elementos en tu alimentación diaria optimiza la recuperación, potencia la formación de
+                        músculo y afina tu foco mental para superar cada desafío con decisión
+                    </p>
+                </div>
+                <div class="Nutri2">
+                    <p>
+                        Para ti, que sueñas con crecer y mejorar en todos los ámbitos de tu vida, te compartimos esta guía nutricional práctica. Porque tu bienestar es el primer paso hacia tus metas, no lo dudes más y comienza hoy mismo tu camino hacia una vida plena y llena de energía. ¡Tú puedes lograrlo!
+                    </p>
+                    <a href="#">
+                        Descargar plan de nutrición
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icono-nutri" width="20" height="20" viewBox="0 0 20 20">
+                        <g fill="currentColor">
+                            <path fill-rule="evenodd" d="M13 4h-1a4 4 0 0 0-3.874 3H8a4 4 0 1 0 0 8h8a4 4 0 0 0 .899-7.899A4 4 0 0 0 13 4" clip-rule="evenodd" opacity="0.2"/>
+                            <path fill-rule="evenodd" d="M11 3h-1a4 4 0 0 0-3.874 3H6a4 4 0 1 0 0 8h8a4 4 0 0 0 .899-7.899A4 4 0 0 0 11 3M6.901 7l.193-.75A3 3 0 0 1 10 4h1c1.405 0 2.614.975 2.924 2.325l.14.61l.61.141A3.001 3.001 0 0 1 14 13H6a3 3 0 1 1 0-6z" clip-rule="evenodd"/>
+                            <path d="M10 10a.5.5 0 0 1 1 0v7.5a.5.5 0 0 1-1 0z"/>
+                            <path d="M12.688 15.11a.5.5 0 0 1 .624.78l-2.5 2a.5.5 0 1 1-.624-.78z"/>
+                            <path d="M7.688 15.89a.5.5 0 0 1 .624-.78l2.5 2a.5.5 0 1 1-.624.78z"/>
+                        </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="contenedorR">
+                    <div class="recuperacion">
+                        <h2 class="h2B ">Recuperación</h2>
+                        <p class="pN">
+                            Después de entrenamientos intensos y prolongados, la recuperación es esencial para
+                            reconstruir y fortalecer tu cuerpo. Primero, prioriza un freno adecuado: el sueño profundo
+                            (7-9 h por noche) permite la secreción de hormonas de crecimiento que reparan fibras
+                            musculares desgarradas durante el esfuerzo. Complementariamente, una dieta post‑workout que
+                            combine proteínas y carbohidratos en proporción 2:1 potencia la reposición de glucógeno y la
+                            síntesis proteica mientras una correcta hidratación con electrolitos ayuda a eliminar
+                            desechos metabólicos y disminuir la inflamación . Además, incorporar recuperación activa,
+                            como <br> estiramientos, foam‑rolling o una caminata suave favorece la circulación y reduce
+                            la rigidez.Técnicas complementarias como baños fríos, saunas o compresión pueden acelerar la
+                            reparación y aliviar el dolor muscular. Finalmente, escucha a tu cuerpo: si aparece fatiga
+                            excesiva o dolor persistente, considera una pausa total o una semana de descarga para evitar
+                            el sobreentrenamiento.
+                        </p>
+                    </div>
+                    <div class="galeriaB">
+                        <div class="contenedor-img">
+                            <img src="img/Blog/dormir.png" class="Galeria_imgs" alt="imagen de una persona durmiendo, referente a las recomendaciones de recuperación del blog">
+                            <div class="texto-hover">Descanso Reparador</div>
+                        </div>
+                        <div class="contenedor-img">
+                            <img src="img/Blog/Alimentacion.png" class="Galeria_imgs" alt="imagen de una buena alimentación, referente a las recomendaciones de recuperación del blog">
+                            <div class="texto-hover">Nutrición Balanceada</div>
+                        </div>
+                        <div class="contenedor-img">
+                            <img src="img/Blog/Estiramiento.png" class="Galeria_imgs" alt="imagen de una persona estirando, referente a las recomendaciones de recuperación del blog">
+                            <div class="texto-hover">Estiramientos Diarios</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedorM">
+                    <h2 class="h2B">Motivación</h2>
+                    <p class="pN">
+                        Motivación es la fuerza interior que enciende el fuego de tus entrenamientos y te impulsa a
+                        superar cada fase de fatiga. Para mantenerla viva, define metas SMART: específicas, medibles,
+                        alcanzables, relevantes y temporales, y regálate un reconocimiento por cada logro porque cada
+                        victoria alimenta tu foco y tu compromiso. Rodéate de una familia fitness: entrenar en comunidad
+                        o con un compañero genera energía colectiva y refuerza tu intención. Y cuando la chispa decaiga,
+                        recuerda tu “por qué”: conectar con tu propósito o visión personal genera una fidelidad mental
+                        que te sostiene más allá de las ganas
+                    </p>
+                    <div class="recomendaciones">
+                        <h2 class="h2Recomendaciones">Recomendaciones</h2>
+                        <div class="contenedorP">
+                            <div>
+                                <img src="img/Blog/pelicula.png" alt="Película de referencia de motivación">
+                            </div>
+                            <div class="pelicila">
+                                <h3 class="h3P">Película-Rocky, protagonizada por Sylvester Stallone</h3>
+                                <p class="pP">Esta icónica película protagonizada por Sylvester Stallone narra la
+                                    historia de Rocky Balboa, un boxeador de clase baja que recibe una oportunidad única
+                                    para pelear por el título mundial. Más allá de la trama deportiva, Rocky es un
+                                    testimonio de resiliencia, disciplina y la importancia de nunca rendirse, incluso
+                                    cuando las probabilidades están en contra. Su mensaje resuena con la idea de superar
+                                    desafíos personales y mantener la motivación viva, tal como mencionas en tu texto.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contenedorL">
+                            <div class="libro">
+                                <h3 class="h3P">Libro-INVICTO, de Marcos Vázquez</h3>
+                                <p class="pL">Marcos Vázquez, creador del proyecto Fitness Revolucionario, presenta en
+                                    Invicto una fusión entre filosofía estoica y psicología moderna, enfocada en
+                                    entrenar la mente para mejorar la vida. El libro aborda cómo la calidad de nuestros
+                                    pensamientos influye directamente en nuestra disciplina, resiliencia y capacidad
+                                    para mantenernos enfocados en nuestros objetivos. Es una lectura ideal para quienes
+                                    buscan fortalecer su mentalidad y aplicar principios de superación personal en su
+                                    día a día</p>
+                            </div>
+                            <div>
+                                <img src="img/Blog/libro.png" alt="Libro de referencia de motivación">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- seccion testimonios -->
+        <section id="Testimonios" class="seccionT">
+            <article>
+                <img class="imgEncabezadoTestimonios" src="img/Testimonios/Img_testimonios.jpg" alt="Fonto testimonios">
+            </article>
+            <article class="testimonios">
+                <div class="contenidoT">
+                    <img src="img/Testimonios/Testimonio1.jpg"
+                        alt="Imagen referentre para el testimonio 1, con un antes y un después ">
+                    <div>
+                        <h2 class="h2T">Daniela</h2>
+                        <p class="pT">
+                            Llegué a CrossFit Fit Force sin saber levantar ni una pesa, cansada y sin motivación. Los
+                            entrenamientos intensos combinados con el apoyo constante de los coach me hicieron
+                            superarme. En seis meses gané fuerza, empecé a correr sin parar y bajé 8 kg sin hacer dietas
+                            extremas. Ahora tengo energía para jugar con mis hijos, duermo profundo y me siento
+                            orgullosa de mi cuerpo. Fit Force me enseñó que no solo es un gimnasio… es una comunidad.
+                        </p>
+                    </div>
+                </div>
+                <div class="contenidoT">
+                    <img src="img/Testimonios/Testimonio2.png"
+                        alt="Imagen referentre para el testimonio 2, con un antes y un después ">
+                    <div>
+                        <h2 class="h2T">Andrés</h2>
+                        <p class="pT">
+                            Tras años sin hacer ejercicio y con dolores frecuentes, llegué a CrossFit Fit Force por
+                            recomendación. Empecé con caminatas y circuitos de fuerza los lunes, miércoles y viernes. En
+                            cinco meses bajé 15 kg, mi presión se normalizó y los dolores de espalda desaparecieron. Lo
+                            mejor: me siento mentalmente más fuerte, con disciplina y seguridad. Además, he contagiado a
+                            mi esposa y a mis hijos a entrenar conmigo.
+                        </p>
+                    </div>
+                </div>
+                <div class="contenidoT">
+                    <img src="img/Testimonios/Testimonio3.png"
+                        alt="Imagen referentre para el testimonio 3, con un antes y un después ">
+                    <div>
+                        <h2 class="h2T">Catalina</h2>
+                        <p class="pT">
+                            Decidí unirme al gym Fit Force buscando cambiar mi rutina sedentaria. Me enganché con las
+                            sesiones de gym tradicional y crossfit los fines de semana. Gracias a su combinación de
+                            pesas y alta intensidad aprendí a alimentarme mejor, mejoré mi postura y mi autoestima. En 4
+                            meses he ganado tono muscular, disminuí mi estrés y duermo mejor. Me encanta que aquí cada
+                            persona se escala a su ritmo, sin presiones.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- Seccion Formulario de contaco -->
+        <section id="Contacto" class="seccionC">
+            <article class="contenedorC">
+                <div class="formulario">
+                    <h2 class="h2C">Contacto</h2>
+                    <div class="contenidoC">
+                        <form class="formC">
+                            <label class="labelC">Nombre</label>
+                            <input class="inputC" type="text" placeholder="Dijite su nombre">
+                            <br>
+                            <label class="labelC">Correo Electrónico</label>
+                            <input class="inputC" type="text" placeholder="Dijite su correo">
+                            <input type="submit" value="Enviar">
+                        </form>
+                        <div class="iconosF">
+                            <!-- Icono de  Instagram-->
+                            <a href="https://www.instagram.com/Kimberline___" target="_blank" rel="noopener noreferrer"> <svg class="iconosC" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" /> </svg> </a>
+                            <!-- Icono de Facebook -->
+                            <a href="https://www.facebook.com/kimberline.Bonilla" target="_blank" rel="noopener noreferrer" aria-label="Ir a Facebook de Kimberline Bonilla"> <svg class="iconosC" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true"> <path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95" /> </svg> </a>
+                            <!-- Icono de Teléfono -->
+                            <a href="tel:+50688853533" target="_blank"><svg class="iconosC" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path fill="currentColor" d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22M3.5 4H7a.5.5 0 0 1 .5.5c0 1.28.2 2.53.59 3.72c.05.14.04.34-.12.5L6 10.68c1.65 3.23 4.07 5.65 7.31 7.32l1.95-1.97c.14-.14.33-.18.51-.13c1.2.4 2.45.6 3.73.6a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5C10.4 21 3 13.6 3 4.5a.5.5 0 0 1 .5-.5" /> </svg></a>
+                            <!-- Icono de WhatsApp -->
+                            <a href="https://wa.me/50686621941?text=Hola%2C%20quiero%20más%20información%20sobre%20Fit%20Force" target="_blank" class="iconosC" aria-label="WhatsApp"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ubicacion">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.318914905829!2d-84.08737701516169!3d9.739029952614658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa11b407f487957%3A0x9d2108e61ab4e0b9!2sLiceo%20San%20Andr%C3%A9s%20De%20Le%C3%B3n%20Cortes!5e0!3m2!1ses-419!2scr!4v1751415975260!5m2!1ses-419!2scr"
+                        width="500" height="447" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </article>
+        </section>
+        <!-- Seccion Footer -->
+        <footer>
+            <img src="img/Banner/Logo.png" alt="Logo Fit Force">
+            <p class="pF">Fit Force, más que un local, una experiencia de vida, una familia y un lugar para desarrollar
+                <span>poder</span> personal y <span>disciplina.</span> </p>
+            <p class="pF">Unéte y sé parte de esta experiencia Fot <span>Force</span></p>
+            <div class="iconosF">
+                <!-- Icono de  Instagram-->
+                <a href="https://www.instagram.com/Kimberline___" target="_blank" rel="noopener noreferrer"> <svg class="iconosC" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" /> </svg> </a>
+                <!-- Icono de Facebook -->
+                <a href="https://www.facebook.com/kimberline.Bonilla" target="_blank" rel="noopener noreferrer" aria-label="Ir a Facebook de Kimberline Bonilla"> <svg class="iconosC" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true"> <path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95" /> </svg> </a>
+                <!-- Icono de Teléfono -->
+                <a href="tel:+50688853533" target="_blank"><svg class="iconosC" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path fill="currentColor" d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22M3.5 4H7a.5.5 0 0 1 .5.5c0 1.28.2 2.53.59 3.72c.05.14.04.34-.12.5L6 10.68c1.65 3.23 4.07 5.65 7.31 7.32l1.95-1.97c.14-.14.33-.18.51-.13c1.2.4 2.45.6 3.73.6a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5C10.4 21 3 13.6 3 4.5a.5.5 0 0 1 .5-.5" /> </svg></a>
+                <!-- Icono de WhatsApp -->
+                <a href="https://wa.me/50686621941?text=Hola%2C%20quiero%20más%20información%20sobre%20Fit%20Force" target="_blank" class="iconosC" aria-label="WhatsApp"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg> </a>
+            </div>
+            <p class="copyright">&copy; 2025 Kimberline Bonilla Mena. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+
+    <script src="Js/script.js"></script>
+</body>
+
+</html>
