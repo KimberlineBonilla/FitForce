@@ -1284,20 +1284,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .contenedorR {
-        display: flex;
-    }
 
-    .seccion_Rutinas{
-        min-height: 140vh;
-    }
-
-    .imgRutinas{
-        min-height: 120vh;
-    }
-
-    .btnR {
-        padding-bottom: 5%;
+    .btn{
+        margin-top: 1rem;
     }
 
     .seccionBlog {
