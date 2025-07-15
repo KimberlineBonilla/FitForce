@@ -31,6 +31,17 @@
     --ff-Teko: 'Teko', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* corta solo lo que sobresale a los lados */
+    overflow-y: auto;
+}
+
 .seccionRutinas {
     background-color: var(--negro);
     padding: 4rem 2rem;
@@ -94,5 +105,61 @@
     font-weight: 400;
     color: var(--naranja);
     text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .seccionRutinas {
+        padding: 6rem 2rem;
+        min-height: 130vh; 
+    }
+
+    .contenedorRutinas {
+        gap: 3rem;
+    }
+
+    .rutinasNiveles {
+        flex-direction: column; 
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .rutina {
+        flex: 1 1 100%;
+        padding: 4rem;
+    }
+
+    .rutina img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+.rutina:last-child {
+    padding: 6rem 4rem;
+    transform: scale(1.05);
+}
+
+.rutina:last-child img {
+    width: 100%;
+    max-width: 40.9rem;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+    .textoDescarga a {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 1.4rem;
+    }
+
+    .h2R {
+        font-size: 4rem;
+        text-align: center;
+    }
 }
 
