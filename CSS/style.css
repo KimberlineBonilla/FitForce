@@ -1304,7 +1304,7 @@ footer {
     /* Media query para móviles (694px o menos) */
     @media only screen and (max-width: 694px) {
         #Rutinas {
-            min-height: 140vh;
+            min-height: 130vh;
             padding: 60px 15px;
         }
 
