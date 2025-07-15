@@ -1304,22 +1304,15 @@ footer {
     /* Media query para móviles (694px o menos) */
     @media only screen and (max-width: 694px) {
         #Rutinas {
-            /* Asegurar que tenga al menos el 80% de la altura de la ventana */
             min-height: 140vh;
-            /* O fijar una altura mínima conveniente */
-            /* min-height: 600px; */
-
-            /* Opcional: más espacio dentro */
             padding: 60px 15px;
         }
 
         .contenedorRutinas {
-            /* Mejora legibilidad en pantallas pequeñas */
             font-size: 0.9rem;
             line-height: 1.4;
         }
 
-        /* Ajustes a la imagen si es necesario */
         .imgRutinas img {
             width: 100%;
             height: auto;
@@ -1475,4 +1468,3 @@ footer {
         font-size: 1.6rem;
     }
 }
-
