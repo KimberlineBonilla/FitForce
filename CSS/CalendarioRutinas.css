@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* Variables de color */
+:root {
+    --rojo: #ff0000;
+    --naranja: #FF5A01;
+    --negro: #141212;
+    --blanco: #ffffff;
+
+    /* Tamaños de fuentes en rem */
+    font-size: 10px;
+    /* 1rem = 10px */
+    --fs-h1-W: 11rem;
+    --fs-h1-T: 9rem;
+    --fs-h2-W: 6.4rem;
+    --fs-h2-T: 5.6rem;
+    --fs-h3-W: 4rem;
+    --fs-h3-T: 3rem;
+    --fs-p-W: 1.8rem;
+    --fs-p-T: 1.7rem;
+
+    /* Familia de Fuentes */
+    --ff-Nunito: 'Nunito', sans-serif;
+    --ff-Teko: 'Teko', sans-serif;
+}
+
+.seccionRutinas {
+    background-color: var(--negro);
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedorRutinas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+
+.rutinasNiveles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:2 rem;
+    margin-top: 2rem;
+}
+
+.rutina {
+    flex: 1 1 30%;
+    background-color: var(--negro);
+    border-radius: 8px;
+    padding: 8rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: var(--blanco);
+}
+
+.rutina:hover {
+    transform: scale(1.03);
+}
+
+.rutina img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.textoDescarga {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.textoDescarga a {
+    font-size: var(--fs-h3-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: var(--naranja);
+    text-decoration: none;
+}
+
