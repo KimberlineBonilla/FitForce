@@ -1288,8 +1288,12 @@ footer {
         display: flex;
     }
 
+    .seccion_Rutinas{
+        min-height: 120vh; 
+    }
+
     .seccionBlog {
-        min-height: 120vh; /* Puedes ajustar este valor según necesites */
+        min-height: 120vh; 
     }
     
     .galeriaB {
