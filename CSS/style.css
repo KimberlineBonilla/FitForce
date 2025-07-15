@@ -1305,7 +1305,7 @@ footer {
     @media only screen and (max-width: 694px) {
         #Rutinas {
             /* Asegurar que tenga al menos el 80% de la altura de la ventana */
-            min-height: 100vh;
+            min-height: 140vh;
             /* O fijar una altura mínima conveniente */
             /* min-height: 600px; */
 
