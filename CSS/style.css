@@ -1288,6 +1288,10 @@ footer {
         display: flex;
     }
 
+    .imgRutinas{
+        min-height: 120vh;
+    }
+
     .btnR {
         padding-bottom: 5%;
     }
