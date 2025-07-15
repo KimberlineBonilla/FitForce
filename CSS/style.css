@@ -1289,7 +1289,9 @@ footer {
     }
 
     .seccion_Rutinas{
-        min-height: 140vh; 
+        .btnR{
+            padding-bottom: 5%;
+        }
     }
 
     .seccionBlog {
