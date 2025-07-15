@@ -1288,6 +1288,10 @@ footer {
         display: flex;
     }
 
+    .seccion_Rutinas{
+        min-height: 140vh;
+    }
+
     .imgRutinas{
         min-height: 120vh;
     }
