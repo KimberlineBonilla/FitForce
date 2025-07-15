@@ -1285,10 +1285,6 @@ footer {
 
 @media (max-width: 768px) {
 
-    .btn{
-        margin-top: 1rem;
-    }
-
     .seccionBlog {
         min-height: 120vh;
     }
@@ -1477,5 +1473,12 @@ footer {
     .btn {
         padding: 12px 20px;
         font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 296px) {
+    .seccion_Rutinas {
+        min-height: 130vh;
+        /* Ajusta según lo que necesites */
     }
 }
