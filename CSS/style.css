@@ -1288,6 +1288,10 @@ footer {
         display: flex;
     }
 
+    .seccionBlog {
+        min-height: 120vh; /* Puedes ajustar este valor según necesites */
+    }
+    
     .galeriaB {
         flex-direction: column;
         gap: 4rem;
