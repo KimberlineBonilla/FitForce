@@ -165,7 +165,7 @@ header div p {
 .btn {
     background: url('../img/Banner/fondoBtn.png') no-repeat center/cover;
     width: 15rem;
-    height: 4rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +176,6 @@ header div p {
     margin-top: 3rem;
     border-radius: 0.5rem;
     position: relative;
-    /* necesario para posicionar el ::after */
     transition: all 0.3s ease;
 }
 
