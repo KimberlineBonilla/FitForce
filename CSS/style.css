@@ -726,6 +726,10 @@ nav {
     border-radius: 2rem;
 }
 
+.btnEnviar{
+    margin-top: 12%;
+}
+
 .labelC {
     font-size: var(--fs-p-W);
     font-family: var(--ff-Nunito);
