@@ -1286,7 +1286,7 @@ footer {
 @media (max-width: 768px) {
 
     .seccionBlog {
-        min-height: 120vh;
+        min-height: 135vh;
     }
 
     .galeriaB {
@@ -1300,47 +1300,6 @@ footer {
     }
 }
 
-@media (max-width: 694px) {
-    /* Media query para móviles (694px o menos) */
-    @media only screen and (max-width: 694px) {
-        #Rutinas {
-            min-height: 100vh;
-            padding: 60px 15px;
-        }
-
-        .contenedorRutinas {
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .imgRutinas img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    }
-}
-
-@media (max-width: 604px) {
-    h1 {
-        font-size: 5rem;
-    }
-
-}
-
-@media (max-width: 665px) {
-    h1 {
-        font-size: 6rem;
-        max-width: 70%;
-    }
-}
-
-@media (max-width: 604px) {
-    h1 {
-        font-size: 5rem;
-    }
-
-}
 
 @media (max-width: 714px) {
     .nutricion {
@@ -1391,6 +1350,48 @@ footer {
         width: 25px;
         height: 25px;
     }
+}
+
+@media (max-width: 694px) {
+    /* Media query para móviles (694px o menos) */
+    @media only screen and (max-width: 694px) {
+        #Rutinas {
+            min-height: 100vh;
+            padding: 60px 15px;
+        }
+
+        .contenedorRutinas {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .imgRutinas img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 604px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width: 665px) {
+    h1 {
+        font-size: 6rem;
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 604px) {
+    h1 {
+        font-size: 5rem;
+    }
+
 }
 
 @media (max-width: 593px) {
