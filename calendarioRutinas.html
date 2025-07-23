@@ -6,23 +6,50 @@
     <title>FitForce Calendario</title>
     <link rel="icon" type="image/png" href="img/Banner/Favicon.png">
     <!-- Link del   CSS -->
-    <link rel="stylesheet" href="CSS/CalendarioRutinas.css">
     <link rel="stylesheet" href="CSS/style.css">
+        <!-- Link a awesome, parta icono -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <section class="seccionCalendario">
+
+        <header>
+        <nav class="navbar">
+            <div class="logo-container ">
+                <img src="img/Banner/Logo.png" alt="Logo">
+            </div>
+            <ul class="ul_menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
+                <li><a href="#Rutinas">Rutinas</a></li>
+                <li><a href="CalendarioRutinas.html">Calendario</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#Testimonios">Testimonios</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+            <div class="menu">
+                <button class="menu_btn" aria-label="abrirMenu"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+        <!--Final NavBar -->
 
         <video class="video" autoplay muted loop playsinline poster="img/banner-poster.jpg">
             <source src="img/Calendario/Calendario.mp4" type="video/mp4">
         </video>
-        <div class="contenedorH2">
-            <h2 class="h2C"><span>Calendario</span> de Rutinas</h2>
-        </div>
-    </section>
 
-<section class="seccionRutinas">
+
+
+        <div class="contenido">
+            <div class="contenido_banner">
+                <h1><span class="h1Red">Calendario</span> de Rutinas</h1>
+                <a href="#ContenedorRutinas" class="btn">Ver más</a>
+            </div>
+        </div>
+
+    </header>
+
+<section class="seccionRutinas" id="ContenedorRutinas">
     <article class="rutina">
-        <h2 class="h2C">CrossFit</h2>
+        <h2 class="h2Cal">CrossFit</h2>
         <div class="galeria">
             <div class="item">
                 <img src="img/Calendario/InicialCrosFit.png" alt="Calendario Inicial CrossFit">
@@ -77,6 +104,7 @@
 
 <a href="index.html" id="boton-regresar">Regresar</a>
 
+<script src="Js/script.js"></script>
 <script src="Js/descargasRutinas.js"></script>
 </body>
 </html>

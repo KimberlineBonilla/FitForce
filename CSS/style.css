@@ -830,8 +830,151 @@ footer {
 }
 
 
+/* /////////////////////////////////// Calendario Rutinas /////////////////////////////////// */
+
+.contenedorH2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+}
+
+.h2Cal {
+    text-align: center;
+    font-size: 6rem;
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
 
 
+.seccionRutinas {
+    padding: 2rem;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.seccionRutinas .rutina {
+    margin-bottom: 3rem;
+}
+
+.h2C {
+    padding-top: 10%;
+}
+
+.seccionRutinas h2 {
+    display: flex;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--naranja);
+    font-size: var(--fs-h2-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+}
+
+.seccionRutinas .galeria {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1%;
+    padding-bottom: 10%;
+}
+
+.seccionRutinas .item {
+    background: var(--negro);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.seccionRutinas .item:hover {
+    box-shadow: 0 4px 16px rgb(0 0 0 / 0.2);
+}
+
+.seccionRutinas .item img {
+    max-width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    height: 180px;
+}
+
+.seccionRutinas .ver-mas {
+    margin-top: 0.75rem;
+    color: var(--naranja);
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: var(--fs-p-W);
+    padding-top: 5%;
+}
+
+/* Para que el SVG esté alineado justo al lado derecho del texto "Ver más" */
+.seccionRutinas .ver-mas+svg {
+    color: var(--naranja);
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.seccionRutinas .ver-mas:hover,
+.seccionRutinas .ver-mas:hover+svg,
+.seccionRutinas .item svg:hover {
+    color: var(--rojo);
+}
+
+/* Estilo del botón flotante fijo */
+#boton-regresar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 0.75rem 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: var(--ff-Nunito);
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+/* Hover y foco */
+#boton-regresar:hover,
+#boton-regresar:focus {
+    background-color: var(--rojo);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .seccionRutinas .galeria {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .seccionRutinas .item {
+        flex: 1 1 100%;
+    }
+}
 
 @media (max-width: 992px) {
 
@@ -1278,6 +1421,12 @@ footer {
     }
 }
 
+@media (max-width: 972px) {
+    .seccionRutinas .item {
+    min-height: 250px;
+    }
+}
+
 @media (max-width: 935px) {
     .cards {
         display: none;
@@ -1291,6 +1440,12 @@ footer {
 @media (max-width: 929px) {
     h1 {
         font-size: var(--fs-h1-T);
+    }
+}
+
+@media (max-width: 900px) {
+    .seccionRutinas .item {
+    min-height: 300px;
     }
 }
 
