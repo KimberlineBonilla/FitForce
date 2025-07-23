@@ -239,7 +239,7 @@ nav {
 }
 
 .menu {
-    margin-top: 2rem;
+
     width: 4rem;
     height: 4rem;
     display: none;
@@ -251,7 +251,7 @@ nav {
     font-size: 4rem;
     cursor: pointer;
     color: var(--blanco);
-    padding-top: 1rem;
+
 }
 
 /* Cards */
@@ -824,9 +824,14 @@ footer {
 
 @media (max-width: 992px) {
 
+    .navbar{
+        display: flex;
+    }
+
     .menu {
         display: block;
     }
+
 
     ul.ul_menu {
         display: none;
