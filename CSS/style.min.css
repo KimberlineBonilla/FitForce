@@ -1,0 +1,1651 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* Variables de color */
+:root {
+    --rojo: #ff0000;
+    --naranja: #FF5A01;
+    --negro: #141212;
+    --blanco: #ffffff;
+
+    /* Tamaños de fuentes en rem */
+    font-size: 10px;
+    /* 1rem = 10px */
+    --fs-h1-W: 11rem;
+    --fs-h1-T: 9rem;
+    --fs-h2-W: 6.4rem;
+    --fs-h2-T: 5.6rem;
+    --fs-h3-W: 4rem;
+    --fs-h3-T: 3rem;
+    --fs-p-W: 1.8rem;
+    --fs-p-T: 1.7rem;
+
+    /* Familia de Fuentes */
+    --ff-Nunito: 'Nunito', sans-serif;
+    --ff-Teko: 'Teko', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* corta solo lo que sobresale a los lados */
+    overflow-y: auto;
+}
+
+/* Inicio Js Menu */
+@keyframes rotarIcono {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(180deg) scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Final Js Menu */
+
+.animar-icono {
+    animation: rotarIcono 0.4s ease;
+}
+
+span {
+    color: var(--rojo);
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.figura {
+    margin-left: 148.5rem;
+    height: 1080px;
+    top: -150px;
+    width: 220px;
+    background: var(--rojo);
+    opacity: 30%;
+    transform: rotate(17deg);
+    z-index: 2;
+    position: absolute;
+}
+
+/* Navbar fija encima */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+    background: rgba(20, 18, 18, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.navbar {
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-container img {
+    height: auto;
+    max-height: 50px;
+}
+
+/* Video de fondo */
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Capa semi-transparente para mejorar lectura */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* Contenido sobre el video */
+.contenido {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.contenido_banner {
+    width: 85%;
+    margin-left: 15%;
+    max-width: 70rem;
+    align-content: start;
+}
+
+h1 {
+    font-size: var(--fs-h1-W);
+    text-align: start;
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+}
+
+.h1Red {
+    color: var(--rojo);
+}
+
+header div p {
+    font-family: var(--ff-Nunito);
+    font-size: var(--fs-p-W);
+    text-align: start;
+}
+
+.btn {
+    background: url('../img/Banner/fondoBtn.png') no-repeat center/cover;
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--naranja);
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0.8rem;
+    /* altura de la línea respecto al texto */
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    /* oculta la línea */
+    transform-origin: center;
+    width: 60%;
+    height: 2px;
+    background-color: var(--naranja);
+    /* color de la línea */
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.btn:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* despliega la línea */
+}
+
+/* NavBar*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+    position: fixed;
+}
+
+/* Estilos de la lista del menú */
+.ul_menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Estilos de los enlaces del menú */
+.ul_menu li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.ul_menu li a:hover {
+    color: var(--naranja);
+}
+
+.menu {
+
+    width: 4rem;
+    height: 4rem;
+    display: none;
+}
+
+.menu_btn {
+    background: none;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    color: var(--blanco);
+
+}
+
+/* Cards */
+.cards {
+    position: absolute;
+    bottom: -15%;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    margin-left: 35rem;
+    right: 0;
+    max-width: 144rem;
+}
+
+.cards>div {
+    margin-left: -16rem;
+    position: relative;
+    /* por si usas z-index más tarde */
+}
+
+.cards div img {
+    position: absolute;
+    height: 22.1rem;
+    width: 30rem;
+}
+
+.cards p {
+    position: relative;
+    margin-left: 10rem;
+    height: 22.1rem;
+    width: 30rem;
+    z-index: 30;
+    place-content: center;
+    font-family: var(--ff-Teko);
+    font-size: var(--fs-h3-W);
+    color: var(--blanco);
+}
+
+/* Sección Sobre Nosotros */
+.sobreNosotros {
+    position: relative;
+    z-index: 10;
+    background-image: url("../img/SobreNosotros/Banner_sobreNosotros.jpg");
+    height: 140rem;
+    gap: 4rem;
+}
+
+.h2SN {
+    display: flex;
+    font-size: var(--fs-h2-W);
+    color: var(--blanco);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    padding-top: 15%;
+    place-content: center;
+}
+
+.contenedor_iconos {
+    text-align: center;
+}
+
+.iconos {
+    width: 15rem;
+    height: 15rem;
+    color: var(--naranja);
+    text-align: center;
+}
+
+.iconos {
+    width: 15rem;
+    height: 15rem;
+    color: var(--naranja);
+    text-align: center;
+    transition: transform 0.4s ease, color 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+}
+
+.iconos:hover {
+    transform: scale(1.05) rotate(15deg);
+    color: var(--rojo);
+    filter: drop-shadow(0 0 12px #ff0000);
+}
+
+.pSH {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.fila1_SN {
+    margin-top: 8rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 278px;
+}
+
+.fila2_SN {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+}
+
+/* Seccion Rutinas */
+.seccion_Rutinas {
+    background-image: url('../img/Rutinas/FontoRutinas.jpg');
+    display: flex;
+    align-items: center;
+}
+
+.contenedorRutinas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.h2R {
+    font-size: var(--fs-h2-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: var(--blanco);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.h2R::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--rojo);
+    transition: width 0.4s ease;
+}
+
+.h2R:hover::after {
+    width: 100%;
+}
+
+
+.pR {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+}
+
+.blog {
+    background-color: var(--negro);
+}
+
+/* /////////////////////// Seccion Blog ///////////////////////*/
+.seccionBlog {
+    background-image: url('../img/Blog/fondoBlog.jpg');
+    width: 192.0rem;
+    height: 108.0rem;
+    place-content: center;
+}
+
+.h21Blog {
+    font-size: var(--fs-h2-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: var(--rojo);
+    text-align: center;
+}
+
+.contenedor_pB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pB {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+    text-align: center;
+    max-width: 120rem;
+}
+
+/* Nutricion */
+.categoriasB {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7.3rem;
+    padding: 5%;
+
+}
+
+.nutricion {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 120rem;
+}
+
+.contenedorR {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Recuperacion */
+.recuperacion {
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 120rem;
+}
+
+.h2B {
+    color: var(--naranja);
+    font-family: Teko;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.pN {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+    max-width: 120rem
+}
+
+.nutricion2 {
+    display: none;
+}
+
+.Nutri2 {
+    display: none;
+}
+
+.galeriaB {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 10%;
+}
+
+.contenedor-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.contenedor-img:hover img {
+    filter: blur(0.5rem) brightness(0.8);
+}
+
+.texto-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--blanco);
+    font-family: var(--ff-Teko);
+    font-size: var(--fs-h2-W);
+    font-weight: 400;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.contenedor-img:hover .texto-hover {
+    opacity: 1;
+}
+
+.recomendaciones {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.h2Recomendaciones {
+    font-size: var(--fs-h2-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: var(--blanco);
+    align-items: end;
+    margin-left: auto;
+}
+
+.contenedorP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.4rem;
+    max-width: 120rem;
+}
+
+.pelicula {
+    display: flex;
+    width: 120rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.3rem;
+}
+
+.h3P {
+    font-size: var(--fs-h3-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: var(--blanco);
+}
+
+.pP {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+}
+
+/* Loibro*/
+.contenedorL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.libro {
+    display: flex;
+    width: 120rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.3rem;
+}
+
+.pL {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+    text-align: end;
+}
+
+/* Testimonios */
+.seccionT {
+    background-color: var(--negro);
+}
+
+.contenedorT {
+    display: flex;
+    width: 1431px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 89px;
+}
+
+.contenidoT img {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.contenidoT img:hover {
+    transform: scale(1.05);
+    /* zoom del 5% */
+}
+
+.testimonio {
+    display: flex;
+    width: 143.1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 89px;
+}
+
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.contenidoT {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.h2T {
+    font-size: var(--fs-h2-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: var(--naranja);
+}
+
+.pT {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+}
+
+/* Formulario de contacto */
+.seccionC {
+    background-image: url("../img/Contacto/FondoContacto.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.contenedorC {
+    display: inline-flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.formulario {
+    display: flex;
+    width: 500px;
+    height: 447.065px;
+    padding: 40.881px 63.941px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.3);
+    align-items: start;
+}
+
+.h2C {
+    font-family: var(--ff-Teko);
+    font-size: var(--fs-h2-W);
+    font-weight: 400;
+    color: var(--blanco);
+}
+
+.contenidoC {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.formC {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inputC {
+    padding: 2%;
+    border-radius: 2rem;
+}
+
+.btnEnviar {
+    margin-top: 12%;
+}
+
+.labelC {
+    font-size: var(--fs-p-W);
+    font-family: var(--ff-Nunito);
+    color: var(--blanco);
+}
+
+input[type="submit"] {
+    padding: 0.8rem 2rem;
+    background-color: var(--rojo);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-family: var(--ff-Nunito);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--naranja);
+}
+
+.iconosC {
+    color: var(--blanco);
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pF {
+    font-family: var(--ff-Nunito);
+    font-size: var(--fs-p-W);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.iconosC {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--blanco);
+}
+
+
+.iconosF {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.iconosC {
+    width: 3rem;
+    height: 3rem;
+    color: var(--blanco);
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.iconosC:hover {
+    transform: scale(1.2);
+    color: var(--naranja);
+    /* o el color que prefieras */
+}
+
+.iconosC:hover {
+    transform: scale(1.2);
+    color: var(--naranja);
+    filter: drop-shadow(0 0 6px var(--naranja));
+}
+
+.copyright {
+    color: var(--blanco);
+    text-align: center;
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    font-size: var(--fs-p-W);
+}
+
+
+/* /////////////////////////////////// Calendario Rutinas /////////////////////////////////// */
+
+.contenedorH2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+}
+
+.h2Cal {
+    text-align: center;
+    font-size: 6rem;
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+
+.seccionRutinas {
+    padding: 2rem;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.seccionRutinas .rutina {
+    margin-bottom: 3rem;
+}
+
+.h2C {
+    padding-top: 10%;
+}
+
+.seccionRutinas h2 {
+    display: flex;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--naranja);
+    font-size: var(--fs-h2-W);
+    font-family: var(--ff-Teko);
+    font-weight: 400;
+}
+
+.seccionRutinas .galeria {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1%;
+    padding-bottom: 10%;
+}
+
+.seccionRutinas .item {
+    background: var(--negro);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.seccionRutinas .item:hover {
+    box-shadow: 0 4px 16px rgb(0 0 0 / 0.2);
+}
+
+.seccionRutinas .item img {
+    max-width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    height: 180px;
+}
+
+.seccionRutinas .ver-mas {
+    margin-top: 0.75rem;
+    color: var(--naranja);
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: var(--fs-p-W);
+    padding-top: 5%;
+}
+
+/* Para que el SVG esté alineado justo al lado derecho del texto "Ver más" */
+.seccionRutinas .ver-mas+svg {
+    color: var(--naranja);
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.seccionRutinas .ver-mas:hover,
+.seccionRutinas .ver-mas:hover+svg,
+.seccionRutinas .item svg:hover {
+    color: var(--rojo);
+}
+
+/* Estilo del botón flotante fijo */
+#boton-regresar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 0.75rem 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: var(--ff-Nunito);
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+/* Hover y foco */
+#boton-regresar:hover,
+#boton-regresar:focus {
+    background-color: var(--rojo);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .seccionRutinas .galeria {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .seccionRutinas .item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .navbar {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+
+    ul.ul_menu {
+        display: none;
+        position: absolute;
+        background: var(--negro);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        top: 9rem;
+        padding: 0 0 7rem 0;
+        left: 0;
+    }
+
+    ul.active {
+        display: flex;
+        z-index: 10;
+    }
+
+    ul li {
+        display: block;
+    }
+
+    .figura {
+        display: none;
+    }
+
+    /* hi */
+    .h1 {
+        font-size: var(--fs-h1-T);
+    }
+
+
+    /* Sobre nosotros */
+    .sobreNosotros {
+        height: auto;
+        padding: 4rem 2rem;
+        background-position: center;
+        background-size: cover;
+        padding-top: 18%;
+    }
+
+    .h2SN {
+        font-size: var(--fs-h2-T);
+        padding-top: 2rem;
+    }
+
+    .fila1_SN {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .contenedor_iconos {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .iconos {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .pSH {
+        font-size: var(--fs-p-T);
+        padding: 1rem;
+    }
+
+    .fila2_SN {
+        margin-top: 3rem;
+        padding: 0 1rem;
+    }
+
+    /* Seccion Rrutinas */
+    .seccion_Rutinas {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 2rem;
+        background-position: center;
+        background-size: cover;
+        height: 60rem;
+        justify-content: center
+    }
+
+    .seccion_Rutinas article {
+        width: 100%;
+        margin: 0;
+    }
+
+    .seccion_Rutinas img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        object-fit: cover;
+        object-position: left;
+        display: block;
+        margin: 0;
+    }
+
+    .seccion_Rutinas article:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .seccion_Rutinas .btn {
+        margin-top: 1.5rem;
+    }
+
+    .h2R {
+        font-size: var(--fs-h2-T);
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .pR {
+        font-size: var(--fs-p-T);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .imgRutinas {
+        display: none;
+    }
+
+    /* Seccion Blog */
+    .seccionBlog {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        padding: 2rem 1rem;
+        min-height: 100dvh;
+        height: clamp(50vh, 60dvh, 80vh);
+        background-size: cover;
+    }
+
+    .h21Blog {
+        font-size: var(--fs-h2-T);
+    }
+
+    .contenedor_pB {
+        gap: 2rem;
+        width: 90%;
+        max-width: 60rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .pB {
+        font-size: var(--fs-p-T);
+        max-width: 90%;
+    }
+
+    /* Nutricion */
+    .nutricion {
+        width: 95%;
+        max-width: 600px;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h2B {
+        font-size: var(--fs-h2-T);
+        text-align: center;
+    }
+
+    .pN {
+        font-size: var(--fs-p-T);
+        line-height: 1.5;
+        text-align: justify;
+        text-align: center;
+    }
+
+    .nutricion img {
+        width: 800px;
+        max-width: 750px;
+        height: auto;
+        display: block;
+    }
+
+    /* Recuperacion  */
+    .recuperacion {
+        padding: 1.5rem;
+    }
+
+    .h2B {
+        font-size: var(--fs-h2-T);
+        text-align: center;
+    }
+
+    .pN {
+        font-size: var(--fs-p-T);
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .galeriaB {
+        display: flex;
+        justify-content: center;
+        gap: 0.3rem;
+        width: 100%;
+    }
+
+    .contenedor-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: filter 0.3s ease;
+    }
+
+    .contenedor-img:hover img {
+        filter: blur(0.5rem) brightness(0.8);
+    }
+
+    .texto-hover {
+        font-size: var(--fs-h3-T);
+    }
+
+    .contenedor-img:hover .texto-hover {
+        opacity: 1;
+    }
+
+    /* Motivacion */
+    .contenedorM {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .h2B,
+    .h2Recomendaciones,
+    .h3P {
+        font-size: var(--fs-h3-T);
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .pN,
+    .pP,
+    .pL {
+        font-size: var(--fs-p-T);
+        text-align: center;
+        margin: 0 auto;
+        max-width: 50rem;
+    }
+
+    .recomendaciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5%;
+        padding-bottom: 0.1rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .contenedorP,
+    .contenedorL {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .contenedorP img,
+    .contenedorL img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .pelicila {
+        width: 100%;
+    }
+
+    /* Testimonios */
+    .imgEncabezadoTestimonios {
+        width: 100vw;
+        height: auto;
+        max-height: 100vh;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .testimonios {
+        max-width: 90%;
+        padding: 0 1rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .contenidoT {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 5% 0;
+    }
+
+    .contenidoT img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .h2T {
+        font-size: var(--fs-h2-T);
+        color: var(--naranja);
+        margin: 0 auto;
+    }
+
+    .pT {
+        font-size: var(--fs-p-T);
+        color: var(--blanco);
+        max-width: 500px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .testimonio,
+    .contenedorT {
+        width: 100%;
+        max-width: 100%;
+        gap: 3rem;
+    }
+
+    /* Formulario de contacto */
+    .seccionC {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: auto;
+        /* más natural para móviles */
+    }
+
+    .contenedorC {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .formulario {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .h2C {
+        text-align: center;
+        width: 100%;
+        font-size: var(--fs-h2-T);
+    }
+
+    .contenidoC {
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .formC {
+        width: 100%;
+    }
+
+    .inputC {
+        width: 100%;
+    }
+
+    .labelC {
+        font-size: var(--fs-p-T);
+        text-align: left;
+    }
+
+    .iconosC {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    iframe {
+        width: 50rem;
+        height: 35rem;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    footer img {
+        width: 15ram;
+        height: auto;
+    }
+
+    .pF {
+        font-size: var(--fs-p-T);
+        max-width: 70%;
+        line-height: 1.6;
+    }
+
+    .iconosF {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .iconosC {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .copyright {
+        font-size: var(--fs-p-T);
+    }
+}
+
+@media (max-width: 972px) {
+    .seccionRutinas .item {
+    min-height: 250px;
+    }
+}
+
+@media (max-width: 935px) {
+    .cards {
+        display: none;
+    }
+
+    .sobreNosotros {
+        padding: 10%;
+    }
+}
+
+@media (max-width: 929px) {
+    h1 {
+        font-size: var(--fs-h1-T);
+    }
+}
+
+@media (max-width: 900px) {
+    .seccionRutinas .item {
+    min-height: 300px;
+    }
+}
+
+@media (max-width: 774px) {
+    h1 {
+        font-size: 7rem;
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .seccionBlog {
+        min-height: 135vh;
+    }
+
+    .galeriaB {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .Galeria_imgs {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+
+@media (max-width: 714px) {
+    .nutricion {
+        display: none;
+    }
+
+    .nutricion2 {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        max-width: 120rem;
+    }
+
+    .Nutri2 {
+        display: block;
+        max-width: 100%;
+        width: 90%;
+        margin: 3rem auto;
+        padding: 2rem;
+        text-align: center;
+        font-family: var(--ff-Nunito);
+    }
+
+    .Nutri2 p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: var(--blanco);
+    }
+
+    .Nutri2 a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 1.5rem;
+        padding: 1rem 2rem;
+        color: var(--naranja);
+        text-decoration: none;
+        font-size: 1.8rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .Nutri2 a:hover {
+        color: var(--rojo);
+    }
+
+    .icono-nutri {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 694px) {
+    /* Media query para móviles (694px o menos) */
+    @media only screen and (max-width: 694px) {
+        #Rutinas {
+            min-height: 100vh;
+            padding: 60px 15px;
+        }
+
+        .contenedorRutinas {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .imgRutinas img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 604px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width: 665px) {
+    h1 {
+        font-size: 6rem;
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 604px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 593px) {
+    .ubicacion {
+        width: 30rem;
+        height: 30rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ubicacion iframe {
+        width: 100%;
+
+        height: 100%;
+    }
+}
+
+@media (max-width: 414px) {
+    .contenedor_iconos {
+        width: 100%;
+        max-width: px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 395px) {
+    .seccionBlog {
+        padding: 80px 10px;
+        min-height: 100vh;
+    }
+
+    .h21Blog {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .contenedor_pB .pB {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    .contenedor_pB .pB span {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 379px) {
+    .seccionBlog {
+        height: 50%
+    }
+
+    .h21Blog {
+        font-size: 5rem;
+    }
+
+    .pB {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 377px) {
+    #Rutinas {
+        height: 50rem;
+        padding: 80px 10px;
+    }
+
+    .contenedorRutinas {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+
+    .h2R {
+        font-size: 3rem;
+        margin-bottom: 0.5em;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 1.6rem;
+    }
+}
