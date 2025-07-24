@@ -305,7 +305,7 @@ nav {
 .sobreNosotros {
     position: relative;
     z-index: 10;
-    background-image: url("../img/SobreNosotros/Banner_sobreNosotros.jpg");
+    background-image: url("../img/SobreNosotros/Banner_sobreNosotros.webp");
     height: 140rem;
     gap: 4rem;
 }
